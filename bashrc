@@ -78,5 +78,6 @@ fi
 function lesscsv() { column -s , -n -t "$@" | less -#2 -N -S; }
 
 if [[ -s "$HOME/.wpgr_info" ]]
+then
   source "$HOME/.wpgr_info"
 fi
