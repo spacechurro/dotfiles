@@ -1,0 +1,11 @@
+# from PuTTY
+"\eOC": forward-word     # Ctrl+right  => forward word
+"\eOD": backward-word    # Ctrl+left   => backward word
+
+# from Terminal
+"\e[5C": forward-word     # Ctrl+right  => forward word
+"\e[5D": backward-word    # Ctrl+left   => backward word
+
+# from iTerm
+"\eO5C": forward-word     # Ctrl+right  => forward word
+"\eO5D": backward-word    # Ctrl+left   => backward word
