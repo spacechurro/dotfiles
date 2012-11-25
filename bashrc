@@ -22,7 +22,7 @@ fi
 
 if [[ $hostname =~ starscream ]] 
 then
-  prompt_color=$COLOR_GREEN
+  prompt_color=$COLOR_BLUE
 fi
 
 if [[ $hostname =~ \.nut ]] 
