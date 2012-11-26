@@ -1,6 +1,0 @@
-#!/bin/bash
-
-export BLOG_URL= # briefcase(BLOG_URL)
-export BLOG_USERNAME= # briefcase(BLOG_USERNAME)
-export BLOG_PASS= # briefcase(BLOG_PASS)
-export AUTH_TOKEN= # briefcase(AUTH_TOKEN)

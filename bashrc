@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.bashrc_colors
+source ~/.dotfiles/bashrc_colors
 
 export TERM=xterm-color
 export GREP_OPTIONS='--color=always'
@@ -77,7 +77,7 @@ fi
 
 function lesscsv() { column -s , -n -t "$@" | less -#2 -N -S; }
 
-if [[ -s "$HOME/.wpgr_info" ]]
+if [[ -s "$HOME/.dotfiles/secrets" ]]
 then
-  source "$HOME/.wpgr_info"
+  source "$HOME/.dotfiles/secrets"
 fi
