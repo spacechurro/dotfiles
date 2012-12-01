@@ -2,7 +2,7 @@
 
 source ~/.dotfiles/bashrc_colors
 
-export TERM=xterm-color
+export TERM=xterm
 export GREP_OPTIONS='--color=always'
 export CLICOLOR=1
 
