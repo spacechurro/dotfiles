@@ -20,5 +20,4 @@ bindkey -d -k kb stuff "\010"
 
 # erase background with current bg color
 defbce "on"
-
-
+altscreen on
