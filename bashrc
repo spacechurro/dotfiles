@@ -7,6 +7,7 @@ export GREP_OPTIONS='--color=always'
 export CLICOLOR=1
 
 #aliases for listing directories
+alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias la='ls -lah'
 alias less='less -R' # parse control chars as colors
