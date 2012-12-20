@@ -13,6 +13,9 @@ alias la='ls -lah'
 alias less='less -R' # parse control chars as colors
 alias ..="cd .."
 
+# weirdo hack for loading readline instead of libedit http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=608442
+alias psql='LD_PRELOAD=/lib/libreadline.so.5 psql'
+
 # prompt
 hostname=`hostname`
 
