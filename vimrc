@@ -6,6 +6,7 @@ set history=1000
 au BufReadPost *.rake set syntax=ruby
 au BufReadPost *.spec set syntax=ruby
 au BufReadPost .irbrc set syntax=ruby
+au BufReadPost Gemfile set syntax=ruby
 au BufReadPost *.scss set filetype=css
 
 set wildmenu
