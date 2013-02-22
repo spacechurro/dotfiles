@@ -24,6 +24,9 @@ set backspace=2 " allows backspacing over line breaks, autoindents, and the star
 
 set tags+=tags;/
 
+set foldmethod=syntax
+au BufReadPost .git/COMMIT_EDITMSG set nofoldenable " don't fold git commits
+
 " remap movement for wrapped lines to go up one screen line as opposed to one line of text
 map <DOWN> gj
 map <UP> gk
