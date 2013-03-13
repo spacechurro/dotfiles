@@ -26,6 +26,8 @@ hostname=`hostname`
 
 if [[ $hostname =~ srabiela ]] 
 then
+  export PGCLUSTER=8.4/main
+  export PGVERSION=8.4
   prompt_color=$COLOR_CYAN
 fi
 
@@ -52,8 +54,6 @@ fi
 # is we at work?
 if [[ $prompt_color ]] 
 then
-  export PGCLUSTER=8.4/main
-  export PGVERSION=8.4
   export PATH="~/bin:/sbin/:/cnu/PACKAGES/ruby/bin/:$PATH"
 else
   prompt_color=$COLOR_GREEN
