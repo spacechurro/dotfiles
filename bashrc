@@ -57,10 +57,11 @@ then
   export PATH="~/bin:/sbin/:/cnu/PACKAGES/ruby/bin/:$PATH"
 else
   prompt_color=$COLOR_GREEN
+  export PATH="~/bin:/sbin/:$PATH"
 fi
 
 export SUDO_PS1="\[${COLOR_RED}\]\w\[${COLOR_NC}\]# "
-export PS1="\[$prompt_color\]\w\[${COLOR_NC}\]\$ "
+export PS1="$hostname_display\[$prompt_color\]\w\[${COLOR_NC}\]\$ "
 
 export EDITOR="vim"
 export PSQL_EDITOR='vim -c"set syntax=sql"'
