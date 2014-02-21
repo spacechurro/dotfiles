@@ -85,6 +85,9 @@ then
   PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi
 
+# https://github.com/zimbatm/direnv
+eval "$(direnv hook bash)"
+
 function lesscsv() { column -s , -n -t "$@" | less -#2 -N -S; }
 
 if [[ -s "$HOME/.dotfiles/secrets" ]]
