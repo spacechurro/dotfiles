@@ -57,7 +57,7 @@ then
   export PATH="~/bin:/sbin/:/cnu/PACKAGES/ruby/bin/:$PATH"
 else
   prompt_color=$COLOR_GREEN
-  export PATH="~/bin:/sbin/:$PATH"
+  export PATH="~/bin:/sbin:/usr/local/bin:$PATH"
 fi
 
 export SUDO_PS1="\[${COLOR_RED}\]\w\[${COLOR_NC}\]# "
@@ -84,6 +84,8 @@ then
   source "$HOME/.rvm/scripts/rvm"
   PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi
+
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 # https://github.com/zimbatm/direnv
 eval "$(direnv hook bash)"
