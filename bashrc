@@ -3,7 +3,7 @@
 source ~/.dotfiles/bashrc_colors
 
 export TERM=xterm
-export GREP_OPTIONS='--color=always'
+export GREP_OPTIONS='--color=always --exclude=*coverage* --exclude=tags'
 export CLICOLOR=1
 
 # of course ls is different on os x
