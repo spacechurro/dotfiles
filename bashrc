@@ -61,7 +61,15 @@ else
 fi
 
 export SUDO_PS1="\[${COLOR_RED}\]\w\[${COLOR_NC}\]# "
-export PS1="$hostname_display\[$prompt_color\]\w\[${COLOR_NC}\]\$ "
+
+if [[ `uname` =~ 'Darwin' ]]
+then
+  prompt_end='👻 '
+else
+  prompt_end='$'
+fi
+
+export PS1="$hostname_display\[$prompt_color\]\w\[${COLOR_NC}\] $prompt_end "
 
 export EDITOR="vim"
 export PSQL_EDITOR='vim -c"set syntax=sql"'
