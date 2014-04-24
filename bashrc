@@ -17,6 +17,7 @@ alias ll='ls -lh'
 alias la='ls -lah'
 alias less='less -R' # parse control chars as colors
 alias ..="cd .."
+alias ta='tmux attach -d -t'
 
 # weirdo hack for loading readline instead of libedit http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=608442
 alias psql='LD_PRELOAD=/lib/libreadline.so.5 psql'
@@ -104,3 +105,5 @@ if [[ -s "$HOME/.dotfiles/secrets" ]]
 then
   source "$HOME/.dotfiles/secrets"
 fi
+
+source "$HOME/.dotfiles/git-completion.bash"
