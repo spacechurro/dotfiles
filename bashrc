@@ -94,8 +94,7 @@ then
   PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi
 
-source '/usr/local/share/chruby/chruby.sh'
-source '/usr/local/share/chruby/auto.sh'
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 # https://github.com/zimbatm/direnv
 eval "$(direnv hook bash)"

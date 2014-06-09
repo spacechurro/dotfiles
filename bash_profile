@@ -4,3 +4,5 @@ then
 fi
 
 source ~/.bashrc
+
+eval "$(rbenv init -)"
