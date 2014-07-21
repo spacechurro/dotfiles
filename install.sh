@@ -10,4 +10,3 @@ ln -sf  $HOME/.dotfiles/irbrc        ~/.irbrc
 ln -sf  $HOME/.dotfiles/bash_profile        ~/.bash_profile
 ln -sf  $HOME/.dotfiles/tmux.conf        ~/.tmux.conf
 ln -sf  $HOME/.dotfiles/powconfig        ~/.powconfig
-ln -sf  $HOME/.dotfiles/bash_logout        ~/.bash_logout
