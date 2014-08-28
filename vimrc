@@ -62,5 +62,6 @@ highlight DiffText term=reverse cterm=bold ctermbg=gray ctermfg=black
 highlight DiffDelete term=reverse cterm=bold ctermbg=red ctermfg=black
 
 function! FormatXML()
+  silent 1,$s/\n//g
   silent 1,$!xmllint --format --recover - 2>/dev/null
 endfunction
