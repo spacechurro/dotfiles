@@ -66,3 +66,6 @@ fi
 source "$HOME/.dotfiles/git-completion.bash"
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
