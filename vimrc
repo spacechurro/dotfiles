@@ -65,3 +65,7 @@ function! FormatXML()
   silent 1,$s/\n//g
   silent 1,$!xmllint --format --recover - 2>/dev/null
 endfunction
+
+function! FormatSQL()
+  silent 1,$!sqlformat --keywords=upper --reindent -
+endfunction
