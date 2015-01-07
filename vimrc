@@ -7,6 +7,7 @@ au BufReadPost *.rake set syntax=ruby
 au BufReadPost *.spec set syntax=ruby
 au BufReadPost .irbrc set syntax=ruby
 au BufReadPost Gemfile set syntax=ruby
+au BufReadPost config.ru set syntax=ruby
 au BufReadPost *.scss set filetype=css
 
 set wildmenu
@@ -68,4 +69,9 @@ endfunction
 
 function! FormatSQL()
   silent 1,$!sqlformat --keywords=upper --reindent -
+endfunction
+
+function! FormatJSON()
+  silent 1,$s/\n//g
+  silent 1,$!python -m json.tool
 endfunction
