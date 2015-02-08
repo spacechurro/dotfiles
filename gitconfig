@@ -3,3 +3,5 @@
 	email = sergiorabiela@gmail.com
 [push]
 	default = current
+[credential]
+	helper = osxkeychain
