@@ -5,3 +5,8 @@
 	default = current
 [credential]
 	helper = osxkeychain
+[init]
+	templatedir = ~/.git_template
+[alias]
+	ff = pull --ff-only
+	pick = ! git checkout $(git branch | cut -c 3- | pick)
