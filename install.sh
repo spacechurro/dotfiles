@@ -12,3 +12,4 @@ ln -sf  $HOME/.dotfiles/tmux.conf        ~/.tmux.conf
 ln -sf  $HOME/.dotfiles/powconfig        ~/.powconfig
 ln -sf  $HOME/.dotfiles/gitconfig        ~/.gitconfig
 ln -sf  $HOME/.dotfiles/psqlrc        ~/.psqlrc
+ln -sf  $HOME/.dotfiles/git_template        ~/.git_template
