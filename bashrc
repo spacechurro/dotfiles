@@ -23,7 +23,7 @@ alias ta='tmux attach -d -t'
 alias psql='LD_PRELOAD=/lib/libreadline.so.5 psql'
 
 prompt_color=$COLOR_GREEN
-export PATH="~/bin:/sbin:/usr/local/bin:$PATH"
+export PATH="./bin:~/bin:/sbin:/usr/local/bin:$PATH"
 
 export SUDO_PS1="\[${COLOR_RED}\]\w\[${COLOR_NC}\]# "
 
