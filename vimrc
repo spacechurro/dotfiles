@@ -83,7 +83,7 @@ function! FormatXML()
 endfunction
 
 function! FormatSQL()
-  silent 1,$!sqlformat --keywords=upper --reindent -
+  silent 1,$!pg_format -
 endfunction
 
 function! FormatJSON()
