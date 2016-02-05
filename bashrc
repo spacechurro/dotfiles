@@ -40,6 +40,7 @@ export EDITOR="vim"
 export PSQL_EDITOR='vim -c"set syntax=sql"'
 
 export HISTCONTROL=ignoredups
+export PROMPT_COMMAND='history -a' # Save Your Bash History Across Tabs And Sessions
 
 shopt -s checkwinsize # After each command, checks the windows size and changes lines and columns
 
