@@ -6,3 +6,5 @@ fi
 source ~/.bashrc
 
 eval "$(rbenv init -)"
+
+export PATH="./bin:$PATH"
