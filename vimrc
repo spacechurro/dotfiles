@@ -4,6 +4,7 @@
 " vim-endwise
 " vim-rails
 " vim-slim
+" vim-less
 " terminus
 " vim-fugitive
 " vim-ruby
