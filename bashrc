@@ -25,6 +25,10 @@ alias psql='LD_PRELOAD=/lib/libreadline.so.5 psql'
 prompt_color=$COLOR_GREEN
 export PATH="~/bin:/sbin:/usr/local/bin:$PATH"
 
+if [ -d "$HOME/Projects/bin" ]; then
+  export PATH="~/Projects/bin:$PATH"
+fi
+
 export SUDO_PS1="\[${COLOR_RED}\]\w\[${COLOR_NC}\]# "
 
 if [[ `uname` =~ 'Darwin' ]]
@@ -50,6 +54,10 @@ bind "set show-all-if-ambiguous on"
 # enable programmable completion features
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+fi
+
+if [ -e "$HOME/.proxy" ]; then
+    . turn_on_proxy
 fi
 
 # https://github.com/zimbatm/direnv
