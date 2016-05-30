@@ -1,13 +1,13 @@
 " pathogen bundles
 "
-" syntastic
-" vim-endwise
-" vim-rails
-" vim-slim
-" vim-less
-" terminus
-" vim-fugitive
-" vim-ruby
+" https://github.com/scrooloose/syntastic.git
+" git://github.com/tpope/vim-endwise.git
+" git://github.com/tpope/vim-rails.git
+" git://github.com/slim-template/vim-slim.git
+" https://github.com/groenewege/vim-less
+" https://github.com/wincent/terminus.git
+" git://github.com/tpope/vim-fugitive.git
+" git://github.com/vim-ruby/vim-ruby.git
 
 execute pathogen#infect()
 syntax enable
