@@ -7,7 +7,7 @@
 " https://github.com/groenewege/vim-less
 " https://github.com/wincent/terminus.git
 " git://github.com/tpope/vim-fugitive.git
-" git://github.com/vim-ruby/vim-ruby.git
+" https://github.com/pangloss/vim-javascript.git
 
 execute pathogen#infect()
 syntax enable
