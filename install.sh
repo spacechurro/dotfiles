@@ -13,4 +13,5 @@ ln -sf  $HOME/.dotfiles/powconfig        ~/.powconfig
 ln -sf  $HOME/.dotfiles/gitconfig        ~/.gitconfig
 ln -sf  $HOME/.dotfiles/psqlrc        ~/.psqlrc
 ln -sf  $HOME/.dotfiles/git_template        ~/.git_template
+ln -sf  $HOME/.dotfiles/bundle/config        ~/.bundle/config
 ln -sf  $HOME/.dotfiles/gitignore    ~/.gitignore
