@@ -1,0 +1,21 @@
+-- kill startup noise
+\set QUIET 1
+
+--marks NULLs as specific character
+--\pset null '¤'
+
+set timezone = 'us/central';
+
+-- shows you when you're in the middle of a query
+\set PROMPT2 '... > '
+
+\timing
+
+-- auto adjust display horizontally or vertically depending on output
+\x auto
+
+\set VERBOSITY verbose
+\set HISTFILE ~/.psql_history- :DBNAME
+\set HISTCONTROL ignoredups
+\set COMP_KEYWORD_CASE upper
+\unset QUIET
