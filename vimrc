@@ -8,6 +8,7 @@
 " https://github.com/wincent/terminus.git
 " git://github.com/tpope/vim-fugitive.git
 " https://github.com/pangloss/vim-javascript.git
+" https://github.com/vim-airline/vim-airline
 
 execute pathogen#infect()
 syntax enable
