@@ -9,6 +9,7 @@
 " git://github.com/tpope/vim-fugitive.git
 " https://github.com/pangloss/vim-javascript.git
 " https://github.com/vim-airline/vim-airline
+" https://github.com/lifepillar/pgsql.vim.git
 
 execute pathogen#infect()
 syntax enable

@@ -14,7 +14,6 @@ set timezone = 'us/central';
 -- auto adjust display horizontally or vertically depending on output
 \x auto
 
-\set VERBOSITY verbose
 \set HISTFILE ~/.psql_history- :DBNAME
 \set HISTCONTROL ignoredups
 \set COMP_KEYWORD_CASE upper
