@@ -3,7 +3,7 @@
 source ~/.dotfiles/bashrc_colors
 
 export TERM=xterm
-export GREP_OPTIONS='--color=always --exclude=*coverage* --exclude=tags'
+export GREP_OPTIONS='--color=always --exclude=*coverage* --exclude=tags --exclude-dir=.git'
 export CLICOLOR=1
 
 # of course ls is different on os x
@@ -25,8 +25,8 @@ alias psql='LD_PRELOAD=/lib/libreadline.so.5 psql'
 prompt_color=$COLOR_GREEN
 export PATH="~/bin:/sbin:/usr/local/bin:$PATH"
 
-if [ -d "$HOME/Projects/bin" ]; then
-  export PATH="~/Projects/bin:$PATH"
+if [ -d "$HOME/Projects/bin/common-onemain-executables" ]; then
+  export PATH="~/Projects/bin/common-onemain-executables:$PATH"
 fi
 
 export SUDO_PS1="\[${COLOR_RED}\]\w\[${COLOR_NC}\]# "
@@ -61,7 +61,7 @@ if [ -e "$HOME/.proxy" ]; then
 fi
 
 # https://github.com/zimbatm/direnv
-eval "$(direnv hook bash)"
+#eval "$(direnv hook bash)"
 
 function lesscsv() { column -s , -n -t "$@" | less -#2 -N -S; }
 
@@ -72,7 +72,10 @@ fi
 
 source "$HOME/.dotfiles/git-completion.bash"
 
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+#export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# https://github.com/athityakumar/colorls
+source $(dirname $(gem which colorls))/tab_complete.sh
