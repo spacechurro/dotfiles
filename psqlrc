@@ -9,7 +9,7 @@ set timezone = 'us/central';
 -- shows you when you're in the middle of a query
 \set PROMPT2 '... > '
 
-\timing
+--\timing
 
 -- auto adjust display horizontally or vertically depending on output
 \x auto
