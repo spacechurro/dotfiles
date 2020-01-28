@@ -39,9 +39,7 @@ set ignorecase " ignore case when searching
 set smartcase " override ignorecase when capitals are present
 set backspace=2 " allows backspacing over line breaks, autoindents, and the start of insert.  needed from 7.0 to 7.2 upgrade
 
-" use fugitive for setting tags instead
-" https://github.com/tpope/vim-fugitive
-"set tags+=tags;/
+set tags^=./.git/tags;
 
 "set foldmethod=syntax
 au BufReadPost .git/COMMIT_EDITMSG set nofoldenable " don't fold git commits
