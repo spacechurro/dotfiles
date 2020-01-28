@@ -15,3 +15,4 @@ ln -sf  $HOME/.dotfiles/psqlrc        ~/.psqlrc
 ln -sf  $HOME/.dotfiles/git_template        ~/.git_template
 ln -sf  $HOME/.dotfiles/bundle/config        ~/.bundle/config
 ln -sf  $HOME/.dotfiles/gitignore    ~/.gitignore
+ln -sf  $HOME/.dotfiles/ctags    ~/.ctags
