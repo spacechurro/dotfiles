@@ -78,4 +78,7 @@ source "$HOME/.dotfiles/git-completion.bash"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # https://github.com/athityakumar/colorls
-source $(dirname $(gem which colorls))/tab_complete.sh
+#source $(dirname $(gem which colorls))/tab_complete.sh
+
+# bash-completion
+ [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
