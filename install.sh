@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# to get ctrl+left and ctrl+right working, disable keyboard shortcuts for mission control in preferences
+
 ln -sf  $HOME/.dotfiles/bashrc        ~/.bashrc
 ln -sf  $HOME/.dotfiles/screenrc      ~/.screenrc
 ln -sf  $HOME/.dotfiles/inputrc       ~/.inputrc
