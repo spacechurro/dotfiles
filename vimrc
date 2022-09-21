@@ -89,7 +89,7 @@ endfunction
 
 function! FormatJSON()
   silent 1,$s/\n//g
-  silent 1,$!python -m json.tool
+  silent 1,$!python3 -m json.tool
 endfunction
 
 

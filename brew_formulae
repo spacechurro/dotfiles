@@ -19,5 +19,7 @@ vim
 watch
 pgFormatter
 bash-completion
+grc
+coreutils
 # brew tap caskroom/fonts
 # brew cask install font-hack-nerd-font
