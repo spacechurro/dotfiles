@@ -28,6 +28,7 @@ alias ls='ls -G'
 alias ll='ls -lh'
 alias la='ls -lah'
 alias less='less -R' # parse control chars as colors
+alias ag='ag --color'
 alias ..="cd .."
 
 
@@ -63,3 +64,8 @@ then
 fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
+# make zsh do tab completion like bash
+setopt noautomenu
+setopt nomenucomplete
