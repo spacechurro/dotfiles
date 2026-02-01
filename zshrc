@@ -78,7 +78,13 @@ if [[ -d /opt/homebrew/opt/grep/libexec/gnubin ]]; then
 fi
 
 alias grep="grep --color=always --exclude='*coverage*' --exclude='tags' --exclude-dir=.git"
-export PS1="%~ 👻 "
+
+# Machine-specific prompt
+if [[ "$(hostname)" == "gibson" ]]; then
+  export PS1="%~ ⚡ "
+else
+  export PS1="%~ 👻 "
+fi
 
 if [[ -s "$HOME/.dotfiles/secrets" ]]
 then
