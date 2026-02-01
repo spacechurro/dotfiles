@@ -1,14 +1,25 @@
-export PATH=/opt/homebrew/bin:$PATH
+# Homebrew (macOS)
+if [[ -f /opt/homebrew/bin/brew ]]; then
+  export PATH=/opt/homebrew/bin:$PATH
+fi
 
-eval "$(rbenv init -)"
+# rbenv
+if command -v rbenv &> /dev/null; then
+  eval "$(rbenv init -)"
+fi
 
 bindkey '^[[1;5C' emacs-forward-word
 bindkey '^[[1;5D' emacs-backward-word
 
 alias ll="ls -l"
-export PATH="/opt/homebrew/opt/postgresql@12/bin:~/bin:$PATH"
+export PATH="~/bin:$PATH"
+if [[ -d /opt/homebrew/opt/postgresql@12/bin ]]; then
+  export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"
+fi
 
-fpath+=(/opt/homebrew/share/zsh/site-functions/prompt_spaceship_setup)
+if [[ -d /opt/homebrew/share/zsh/site-functions ]]; then
+  fpath+=(/opt/homebrew/share/zsh/site-functions/prompt_spaceship_setup)
+fi
 
 # add color to ls
 export CLICOLOR=1
@@ -33,12 +44,19 @@ alias ..="cd .."
 
 
 # https://github.com/sorin-ionescu/prezto
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
 # https://github.com/tarjoilija/zgen
-source "${HOME}/.zgen/zgen.zsh"
+# apt installs to /usr/share/zgen, git clone installs to ~/.zgen
+if [[ -s "${HOME}/.zgen/zgen.zsh" ]]; then
+  source "${HOME}/.zgen/zgen.zsh"
+elif [[ -s /usr/share/zgen/zgen.zsh ]]; then
+  source /usr/share/zgen/zgen.zsh
+fi
 
-if ! zgen saved; then
+if command -v zgen &> /dev/null && ! zgen saved; then
   zgen prezto
   zgen prezto git
   zgen prezto command-not-found
@@ -52,8 +70,12 @@ fi
 # promptinit
 # prompt spaceship
 
-export PATH="/opt/homebrew/opt/node@14/bin:$PATH"
-PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+if [[ -d /opt/homebrew/opt/node@14/bin ]]; then
+  export PATH="/opt/homebrew/opt/node@14/bin:$PATH"
+fi
+if [[ -d /opt/homebrew/opt/grep/libexec/gnubin ]]; then
+  PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+fi
 
 alias grep="grep --color=always --exclude='*coverage*' --exclude='tags' --exclude-dir=.git"
 export PS1="%~ 👻 "
@@ -62,10 +84,12 @@ if [[ -s "$HOME/.dotfiles/secrets" ]]
 then
   source "$HOME/.dotfiles/secrets"
 fi
-eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ -f /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 
 # make zsh do tab completion like bash
 setopt noautomenu
 setopt nomenucomplete
+export PATH="$HOME/.local/bin:$PATH"
