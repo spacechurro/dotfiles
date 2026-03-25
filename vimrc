@@ -1,17 +1,3 @@
-" pathogen bundles
-"
-" https://github.com/scrooloose/syntastic.git
-" git://github.com/tpope/vim-endwise.git
-" git://github.com/tpope/vim-rails.git
-" git://github.com/slim-template/vim-slim.git
-" https://github.com/groenewege/vim-less
-" https://github.com/wincent/terminus.git
-" git://github.com/tpope/vim-fugitive.git
-" https://github.com/pangloss/vim-javascript.git
-" https://github.com/vim-airline/vim-airline
-" https://github.com/lifepillar/pgsql.vim.git
-
-execute pathogen#infect()
 syntax enable
 filetype plugin indent on
 

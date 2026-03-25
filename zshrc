@@ -42,6 +42,11 @@ alias less='less -R' # parse control chars as colors
 alias ag='ag --color'
 alias ..="cd .."
 
+# Auto-attach or create a main session
+alias t='tmux new-session -A -s main'
+
+alias td='tmux detach'
+
 
 # https://github.com/sorin-ionescu/prezto
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -99,3 +104,11 @@ fi
 setopt noautomenu
 setopt nomenucomplete
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH"
+
+# bun completions
+[ -s "/home/sergio/.bun/_bun" ] && source "/home/sergio/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
